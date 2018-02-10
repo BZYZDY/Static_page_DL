@@ -1,0 +1,509 @@
+<html>
+<body style>
+<div id="app">
+<div class="container">
+
+<div class="header-block">
+	<div class="header-block-content">
+	
+		<div class="logo-block">
+			<a class="logo-link">
+				<img src="logo.jpg" class="logo-image">
+			</a>
+		</div>
+		
+		<div class="userinfo-block">
+			<div class="block-info">
+				<label class="block-info-title">
+					<a class="block-info-link">登录|注册</a>
+				</label>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="content">
+
+	<div class="navbar">
+		<div class="nav-block">
+			<div class="nav-block_nav-title">深度学习平台</div>
+			<ul class="nav-block_nav-list">
+				<li class="nav-block_nav-item"><a class="nav-block_link" href="page1.html">文件管理</a></li>
+				<li class="nav-block_nav-item"><a class="nav-block_link router-link-exact-active router-link-active">项目管理</a></li>
+				<li class="nav-block_nav-item"><a class="nav-block_link">镜像管理</a></li>
+			</ul>
+		</div>
+	</div>
+
+<div class="product product-container">       <!-- //右侧总内容div -->
+	
+	<div class="product-name">                <!-- 文字总览 -->
+		<div class="name">                    <!-- 文字板-->
+		<a class="name_item">我的项目</a>
+		</div>
+	</div>
+	
+	<div class="prodect-buttons">                                     <!-- 上传文件等按钿-->
+		<div class="upload">
+			<input type="file" name="file" multiple="multiple" class="upload_input">
+			<div class="upload_wrap">
+				<button type="button" class="button button--primary">
+					<span>新建项目</span>
+				</button>
+			</div>
+		</div>
+		
+		<!-- <button type="button" class="button is-disabled button--primary" style="display: none;">
+			<span>
+			上传
+			</span>
+		</button>
+		 -->
+		<button type="button" class="button is-plain button--default">
+			<span>
+			修改
+			</span>
+		</button>
+		
+		<!-- <div class="dialog_wrapper" style="z-index:2016; display:none;">
+			<div class="dialog dialog-small creat-rename-dialog" style="top:15%;">
+				<div class="dialog_header">
+					<span class="dialog_title">新建文件夿/span>
+					<button type="button" aria-label="Close" class="dialog_headerbtn">
+						<i class="dialog_close icon icon-close"></i>
+					</button>
+				</div>
+				<div class="dialog_body">
+					<form class="form" onsubmit="return false;">
+						<div class="form=item">
+							<label for="name" class="form-item_label" style="width:88px;">文件夹名秿/label>
+							<div class="form-item_content" style="margin-left:88px;">
+								<div class="input">
+									<input autocomplete="off" placeholder="请输入文件夹名称" type="text" rows="2" validateevent="true" class="input_inner">								
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="dialog_footer">
+					<div class="dialog-footer">
+						<button type="button" class="button button_cancle button--default">
+						<span>取消</span>
+						</button>
+						<button type="button" class="button  button--primary">
+						<span>确定</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		
+		<button type="button" class="button is-plain button--default">
+			<span>
+				删除
+			</span>
+		</button>
+		
+	</div>
+	
+	<div class="hdfs-container">
+		<div class="el-table el-table--fit el-table--striped el--table--enable-row-hover el-table--enable-row-transition" style="width: 100%; z-index: 1;position:relative;">
+			<!-- ::before -->
+			<div class="hidden-columns"><div></div></div>
+			<div class="el-table_header-wrapper">
+				<table cellspacing="0" cellpadding="0" border="0" class="el-table_header" style="width: 962px;">
+					<colgroup>
+						<col name="el-table_1_column_1" width="230">
+						<col name="el-table_1_column_2" width="268">
+						<col name="el-table_1_column_3" width="268">
+						<col name="el-table_1_column_4" width="80">
+						<col name="gutter" width>
+					</colgroup>
+					<thead>
+						<tr>
+							<th colspan="1" rowspan="1" class="el-table_1_column_1 is-leaf">
+								<div class="cell">项目名称</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_2 is-leaf">
+								<div class="cell">任务数目</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_3 is-leaf">
+								<div class="cell">时间</div>
+							</th>
+							<th colspan="1" rowspan="1" class="el-table_1_column_4 is-leaf">
+								<div class="cell">操作</div>
+							</th>
+							<th class="gutter" style="width: 0px;"></th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="el-table_body-wrapper"></div>
+		</div>
+	</div>
+	
+	
+	
+</div>
+
+</div>
+</div>
+</body>
+</html>
+
+<style>
+body,html{
+    border: 0;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+#app{
+	height:100%;
+}
+.container{
+    height: 100%;
+    min-height: 100%;
+}
+.header-block{
+    height: 50px;
+    background: #ffffff;
+}
+.header-block.static-position{
+    position:static;
+}
+.header-block-content{
+	box-shadow: 0 2px 4px 0 rgba(34, 38, 45, 0.14);
+}
+.header-block-content:after{
+	content:' ';
+	display:block;
+	height:1px;
+	position:absolute;
+	left:180px;
+	top:49px;
+	right:0;
+	z-index:2;
+	box-shadow: 0 2px 4px 0 rgba(34, 38, 45, 0.14);
+}
+.logo-block{
+	width: 180px;
+    height: 50px;
+    float: left;
+    background: #fafafc;
+    border-right: 1px solid #dfe4ea;
+}
+.logo-block .logo-link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 35px;
+}
+.logo-block .logo-image{
+    width: 110px;
+    height: 30px;
+}
+.userinfo-block{
+	position: relative;
+    float: right;
+    max-width: 200px;
+    height: 50px;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #73889E;
+    letter-spacing: 0;
+    text-align: right;
+    cursor: pointer;
+}
+.block-info{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    color: #899eb3;
+    cursor: pointer;
+    background: #fff;
+    padding-right: 0;
+    overflow: hidden;
+    text-align: right;
+}
+.block-info .block-info-title{
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100px;
+    height: 100%;
+    line-height: 50px;
+    margin-right: 4px;
+    font-size: 14px;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+a.block-info-link{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #899eb3;
+}
+#app .content{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+}
+#app .navbar{
+    position: relative;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 180px;
+    height: 100%;
+    background: #2c354c;
+}
+.nav-block{
+    position: relative;
+    width: 100%;
+    box-shadow: 2px 0 5px 0 rgba(20, 37, 66, 0.04);
+}
+.nav-block .nav-block_nav-title{
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: 50px;
+    border-bottom: 1px solid #333C51;
+}
+.nav-block .nav-block_nav-list{
+    padding-top: 10px;
+}
+.nav-block .nav-block_nav-item{
+    height: 50px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 50px;
+}
+.nav-block .nav-block_link.router-link-active{
+	background: #3A4560;
+    color: #ffffff;
+    box-shadow: 2px 0 5px 0 rgba(20, 37, 66, 0.04);
+    position: relative;
+}
+.nav-block .nav-block_link{
+    position: relative;
+    display: block;
+    padding-left: 24px;
+    color: #90979e;
+}
+#app .product,
+#app .product-space{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+.product-container .product-name{
+	position:relative;
+}
+.product-container .product-name  .name{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+.name_item{
+    font-size: 16px;
+    height: 22px;
+    margin-bottom: 10px;
+}
+.product-container .prodect-buttons{
+	font-size: 0px;
+}
+div{
+	border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+span{
+	border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.upload{
+	display: inline-block;
+}
+.product-container .prodect-buttons .button {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.button{
+    padding: 0 15px;
+    height: 36px;
+	display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    margin: 0;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	outline: 0;
+    text-align: center;
+	align-items: flex-start;
+}
+button, input, select{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+.upload_input{
+	display:none;
+}
+.button--primary {
+    background-color: #118BFB;
+    border-color: #118BFB;
+    color: #FFF;
+	border-radius: 4px;
+    font-size: 14px;
+}
+.button--default {
+    background-color: #FFF;
+    border: 1px solid #D4DEE6;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #73889E;
+}
+.product-container .hdfs-container {
+    position: relative;
+    margin-top: 15px;
+}
+.el-table {
+    border: none;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+	overflow: hidden;
+	max-width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    color: #1f2d3d;
+	box-sizing: border-box;
+}
+.el-table .hidden-columns {
+    position: absolute;
+    z-index: -1;
+	visibility: hidden;
+}
+.el-table .el-table__header-wrapper {
+    border-bottom: 1px solid #eee;
+	width: 100%;
+	overflow: hidden;
+}
+.el-table__header {
+    table-layout: fixed;
+}
+.el-table .el-table__header-wrapper thead div {
+    height: 20px;
+	color: #333;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+    font-weight: 400;
+    background-color: #fff;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+	border: 0;
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+colgroup {
+    display: table-column-group;
+}
+col {
+    display: table-column;
+}
+thead {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	display: table-header-group;
+    vertical-align: middle;
+}
+tr {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: table-row;
+    vertical-align: inherit;
+}
+.el-table tr>th.is-leaf {
+    border-bottom: none;
+	padding: 15px 0;
+}
+.el-table tr>th.is-leaf div.cell {
+    padding-right: 40px;
+}
+.el-table tr>th {
+    min-height: 50px;
+	background-color: #fff;
+}
+.el-table tr>th div.cell {
+    padding-left: 0;
+}
+.el-table th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+	height: 40px;
+    min-width: 0;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    box-sizing: border-box;
+    position: relative;
+}
+th{
+    font-weight: bold;
+	display: table-cell;
+}
+.el-table th>.cell {
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+	position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.el-table .cell {
+    white-space: normal;
+    word-break: break-all;
+	overflow: hidden;
+}
+.el-table--fit th.gutter {
+    border-right-width: 1px;
+}
+.el-table td.gutter, .el-table th.gutter {
+    border-bottom-width: 0;
+    padding: 0;
+}
+</style>
